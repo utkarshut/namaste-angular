@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ObservableComponent } from './observable/observable.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { NgModelChangeComponent } from './ng-model-change/ng-model-change.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ChildComponent } from './child/child.component';
     ObservableComponent,
     ParentComponent,
     ChildComponent,
+    NgModelChangeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

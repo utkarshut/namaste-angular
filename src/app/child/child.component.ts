@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { DataserviceService } from '../dataservice.service';
 
 @Component({
@@ -8,10 +16,9 @@ import { DataserviceService } from '../dataservice.service';
 })
 export class ChildComponent implements OnInit, OnChanges {
   public childInputValueUsingSubject: string = '';
-  public childInputValueUsingNgModelChange: string = '';
-  public _inputValueFromParent:string = '';
-  // Value or function can be trigger by change in input property 
-  @Input() set inputValueFromParent(value:string){
+  public _inputValueFromParent: string = '';
+  // Value or function can be trigger by change in input property
+  @Input() set inputValueFromParent(value: string) {
     this._inputValueFromParent = value;
   }
 
@@ -32,13 +39,5 @@ export class ChildComponent implements OnInit, OnChanges {
 
   public onChangeInput(e: any) {
     this._dataService.childInputSubject.next(e.target.value);
-  }
-  /**
-   * ngModelChange is angular change detection method for ngModel property
-   * @param e 
-   */
-  public onChangeInputByNgModel(e: any) {
-    this.childInputValueUsingNgModelChange = e;
-    this._dataService.childInputSubject.next(e);
   }
 }

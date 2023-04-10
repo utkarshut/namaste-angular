@@ -1,0 +1,10 @@
+<p>ng-model-change works!</p>
+<span> Child Input Box For ngModelChange : </span>
+<input
+  [(ngModel)]="childInputValueUsingNgModelChange"
+  (ngModelChange)="onChangeInputByNgModel($event)"
+/>
+<div class="childInputValueUsingNgModelChange">
+  <b>child value using ng Model change</b>
+  {{ childInputValueUsingNgModelChange }}
+</div>
