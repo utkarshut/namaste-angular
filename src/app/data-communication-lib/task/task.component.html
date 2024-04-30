@@ -1,0 +1,16 @@
+<div class="taskContainer">
+    <ng-container *ngIf="!task.CHECKED && task.STATUS !== 'COMPLETED'; else checkedTemplate;">
+    <input type="checkbox" [checked]="task.CHECKED"/>
+     <div class="title">{{task.TITLE}}</div>
+     <div class="status">{{task.STATUS}}</div>
+     <div class="deleteTask">    
+         <i class="material-icons" [ngClass]="{ 'disabled': task.DELETE }">delete</i>
+     </div>
+</ng-container>
+<ng-template #checkedTemplate>
+    <input type="checkbox" [checked]="task.CHECKED"/>
+    <div class="title">{{task.TITLE}}</div>
+    <div class="status">{{task.STATUS}}</div>
+</ng-template>
+</div>
+

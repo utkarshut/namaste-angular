@@ -1,0 +1,18 @@
+.taskContainer{
+    display: flex;
+    .taskListContainer{
+        // width: 50%;
+    }
+    .taskCompletedOrDeleted{
+        // width: 50%;
+        margin-left: 10%;
+    }
+    .taskList{
+        height:20em;
+        overflow: scroll;
+    }
+    .disabled{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

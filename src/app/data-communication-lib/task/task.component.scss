@@ -1,0 +1,19 @@
+.taskContainer{
+    border: 1px solid #ccc;
+    padding: 1em;
+    background-color: aqua;
+    width: 20em;
+    display: flex;
+    margin: 0.5em;
+    align-items: center;
+}
+.title, .checkbox,.status{
+    width: 25%;
+    padding: 0 0.25em;
+}
+.deleteTask{
+    margin-left: auto;
+}
+.status{
+    width: 35%;
+}
