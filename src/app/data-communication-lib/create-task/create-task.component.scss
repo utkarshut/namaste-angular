@@ -1,0 +1,28 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+}
+.formRow{
+    display: flex;
+    margin: 0.25em;
+    div{
+        margin: 0 0.25em;
+        width: 50%;
+    }
+    input{
+        margin: 0 0.25em;
+        width: 50%;
+    }
+}
+.submitButton{
+    width: 5em;
+    margin-left: auto;
+    margin: 0.5em;
+    margin-left: auto;
+}
+.error{
+    font-size: 700;
+    color: red;
+    text-align: center;
+}

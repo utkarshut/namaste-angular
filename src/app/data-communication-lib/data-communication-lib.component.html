@@ -1,14 +1,19 @@
 <div class="taskContainer">
   <div class="taskListContainer">
     <h1> Task List</h1>
+    <button id="addTask" (click)="show()">Add New Task</button>
+    <dialog id="myDialog">
+      <app-create-task (emitData)="createEmitEvent($event)"></app-create-task>
+      <button id="closeDialog" (click)="close()">Close</button>
+  </dialog>
     <div class="taskList">
-      <app-task-list [showCompleted]="false"></app-task-list>
+      <app-task-list [addedTask]="addedTask" [showCompleted]="false"></app-task-list>
     </div>
   </div>
   <div class="taskCompletedOrDeleted">
     <h1> Task Completed</h1>
     <div class="taskList">
-      <app-task-list [showCompleted]="true"></app-task-list>
+      <app-task-list [addedTask]="addedTask"  [showCompleted]="true"></app-task-list>
     </div>
   </div>
 </div>

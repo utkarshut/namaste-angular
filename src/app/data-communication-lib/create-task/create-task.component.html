@@ -1,0 +1,21 @@
+<p>Create Task</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="formContainer">
+        <div class="formRow">
+            <div class="titleLabel">Enter Title</div>
+            <input type="text" formControlName="TITLE">
+        </div>
+        <div class="error" *ngIf="myForm.get('TITLE')?.invalid && myForm.get('TITLE')?.touched">
+            Title is required
+          </div>
+        <div class="formRow">
+            <div class="titleLabel">Enter Status</div>
+            <input type="text" formControlName="STATUS">
+        </div>
+        <div class="error" *ngIf="myForm.get('STATUS')?.invalid && myForm.get('STATUS')?.touched">
+            Status is required
+          </div>
+        <button class="submitButton" type="submit">Submit</button>
+    </div>
+</form>
+

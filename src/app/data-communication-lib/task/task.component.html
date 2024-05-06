@@ -4,7 +4,7 @@
      <div class="title">{{task.TITLE}}</div>
      <div class="status">{{task.STATUS}}</div>
      <div class="deleteTask">    
-         <i class="material-icons" [ngClass]="{ 'disabled': task.DELETE }">delete</i>
+         <i class="material-icons" (click)="deleteTask($event, task)" [ngClass]="{ 'disabled': task.DELETE }">delete</i>
      </div>
 </ng-container>
 <ng-template #checkedTemplate>
