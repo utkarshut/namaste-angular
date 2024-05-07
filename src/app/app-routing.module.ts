@@ -9,6 +9,7 @@ const routes: Routes = [
         (m) => m.FormsLibModule
       ),
   },
+  { path: 'lifeCycleHooks', loadChildren: () => import('./life-cycle-hook-lib/life-cycle-hook-lib.module').then(m => m.LifeCycleHookLibModule) },
 ];
 
 @NgModule({

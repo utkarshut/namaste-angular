@@ -8,6 +8,7 @@ import { TaskComponent } from './task/task.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskFilterPipe } from './task-filter.pipe';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { HighLightElementDirective } from './high-light-element.directive';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CreateTaskComponent } from './create-task/create-task.component';
     TaskListComponent,
     TaskFilterPipe,
     CreateTaskComponent,
+    HighLightElementDirective,
   ],
   imports: [
     FormsModule,
