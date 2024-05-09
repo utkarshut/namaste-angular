@@ -1,0 +1,19 @@
+.googleSearch{
+    input{
+        margin: 1em 1em 0em 1em;
+        padding: 0.5em;
+        width: 20em;
+    }
+    .searchBox{
+        border: 1px solid #ccc;
+        margin: 0em 0em 1em 0.9em;
+        width: 17.5em;
+    }
+    .searchItem{
+        cursor: pointer;
+        padding: 2px 6px;
+    }
+    .searchItem:hover{
+        background-color: #ccc;
+    }
+}

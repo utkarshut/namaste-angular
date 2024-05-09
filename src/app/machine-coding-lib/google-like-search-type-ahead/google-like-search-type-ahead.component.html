@@ -1,0 +1,9 @@
+<div class="googleSearch">
+    <input (keyup)="debounceFunction($event)"/>
+    <ng-container *ngIf="suggestionList$ && suggestionList$.length >0">
+        <div class="searchBox">
+            <div class="searchItem" *ngFor="let item of suggestionList$" [innerHTML]="item">
+            </div>
+        </div>
+    </ng-container>
+</div>
