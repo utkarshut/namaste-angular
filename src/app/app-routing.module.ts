@@ -10,6 +10,7 @@ const routes: Routes = [
       ),
   },
   { path: 'lifeCycleHooks', loadChildren: () => import('./life-cycle-hook-lib/life-cycle-hook-lib.module').then(m => m.LifeCycleHookLibModule) },
+  { path: 'machineCodeLib', loadChildren: () => import('./machine-coding-lib/machine-coding-lib.module').then(m => m.MachineCodingLibModule) },
 ];
 
 @NgModule({

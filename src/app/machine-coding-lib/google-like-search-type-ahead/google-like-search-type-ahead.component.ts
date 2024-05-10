@@ -32,7 +32,7 @@ export class GoogleLikeSearchTypeAheadComponent implements OnInit {
   public search(event: any) {
     console.log('Using Custom Function : ', event?.target?.value);
     this.dataService.getData(event?.target?.value).subscribe((data:any)=>{
-      this.suggestionList$ = data[0].map((m:any)=>m[0])
+      this.suggestionList$ = data?.body[0]?.map((m:any)=>m[0])
     });
     
   }
