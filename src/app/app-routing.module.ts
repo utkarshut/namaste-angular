@@ -1,7 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {
+    path:"login",
+    component: LoginComponentComponent
+  },
+  {
+    path:"",
+    component: HomeComponent
+  },
+  {
+    path:"home",
+    component: HomeComponent
+  },
   {
     path: 'toDoList',
     loadChildren: () =>
