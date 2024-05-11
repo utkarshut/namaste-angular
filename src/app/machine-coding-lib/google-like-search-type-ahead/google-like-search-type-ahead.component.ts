@@ -12,7 +12,7 @@ export class GoogleLikeSearchTypeAheadComponent implements OnInit {
   public suggestionList$:any[] = [];
   constructor(private dataService: DataProviderService) {}
   ngOnInit() {
-    this.searchTerms
+    this.searchTerms 
       .pipe(
         // wait 300ms after each keystroke before considering the term
         debounceTime(1000),
