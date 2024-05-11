@@ -25,7 +25,7 @@ export class GoogleLikeSearchTypeAheadComponent implements OnInit {
         })
       ) 
       .subscribe((results: any[]) => {
-        console.log(results);
+        console.log(results); 
         // handle search results
       });
   }
