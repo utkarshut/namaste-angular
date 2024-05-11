@@ -23,7 +23,7 @@ export class GoogleLikeSearchTypeAheadComponent implements OnInit {
           console.log('Using RxJs Observable debounceTime :', term);
           return term;
         })
-      )
+      ) 
       .subscribe((results: any[]) => {
         console.log(results);
         // handle search results
