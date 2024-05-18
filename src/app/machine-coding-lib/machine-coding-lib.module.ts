@@ -5,12 +5,14 @@ import { MachineCodingLibRoutingModule } from './machine-coding-lib-routing.modu
 import { MachineCodingLibComponent } from './machine-coding-lib.component';
 import { GoogleLikeSearchTypeAheadComponent } from './google-like-search-type-ahead/google-like-search-type-ahead.component';
 import { DataProviderService } from './data-provider.service';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 
 @NgModule({
   declarations: [
     MachineCodingLibComponent,
-    GoogleLikeSearchTypeAheadComponent
+    GoogleLikeSearchTypeAheadComponent,
+    StarRatingComponent
   ],
   imports: [
     CommonModule,
