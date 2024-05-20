@@ -6,5 +6,12 @@
       "pathRewrite": {
         "^/api": ""
       }
+    },
+    "/graphQL": {
+      "target": "http://localhost:4000",
+      "secure": false,
+      "pathRewrite": {
+        "^/api": ""
+      }
     }
   }
