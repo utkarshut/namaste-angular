@@ -16,6 +16,7 @@ export class LoginComponentComponent {
   public name: any;
   public password: any;
   public user$: Observable<any>; // Define an Observable to hold the user
+  public errorMessage!: string;
 
   constructor(
     private store: Store<any>,
@@ -33,10 +34,13 @@ export class LoginComponentComponent {
     console.log('onSubmit', this.name, this.password);
     this.authService.login(this.name, this.password).subscribe({
       next: (data) => {
+        this.errorMessage = '';
         console.log(data);
         this.router.navigate(["/home"]);
       },
-      error: (err) => console.log(err),
+      error: (err) => {
+        this.errorMessage = 'Invalid username or password. Please try again.';
+        console.log(err)},
     });
     this.store.dispatch(login({ user: this.name, password: this.password }));
   }

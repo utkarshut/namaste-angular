@@ -1,16 +1,11 @@
-<div class="taskContainer">
-    <ng-container *ngIf="!task.CHECKED && task.STATUS !== 'COMPLETED'; else checkedTemplate;">
-    <input type="checkbox" [checked]="task.CHECKED"/>
-     <div class="title">{{task.TITLE}}</div>
-     <div class="status">{{task.STATUS}}</div>
-     <div class="deleteTask">    
-         <i class="material-icons" (click)="deleteTask($event, task)" [ngClass]="{ 'disabled': task.DELETE }">delete</i>
-     </div>
-</ng-container>
-<ng-template #checkedTemplate>
-    <input type="checkbox" [checked]="task.CHECKED"/>
-    <div appHighLightElement class="title">{{task.TITLE}}</div>
-    <div class="status">{{task.STATUS}}</div>
-</ng-template>
-</div>
-
+<div class="taskContainer" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <mat-checkbox [checked]="task.CHECKED" *ngIf="!task.CHECKED && task.STATUS !== 'COMPLETED'" (change)="onCheckboxChange($event, task)"></mat-checkbox>
+    <div class="content">
+      <div class="title" appHighLightElement>{{task.TITLE}}</div>
+      <div class="status">{{task.STATUS}}</div>
+    </div>
+    <button mat-icon-button *ngIf="!task.DELETE" (click)="deleteTask($event, task)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  

@@ -11,8 +11,13 @@ export class TaskComponent {
  @Input() public status:any;
  @Output() public deleteTaskItem = new EventEmitter();
 
+ onCheckboxChange(event: any, task:any){
+
+ }
+
  public deleteTask(event: any, task:any){
   console.log(task);
   this.deleteTaskItem.emit(task);
  }
+
 }

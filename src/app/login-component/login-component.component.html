@@ -1,15 +1,18 @@
 <div class="loginComponent">
-    <form #form (ngSubmit)="onSubmit()">
+  <form #form (ngSubmit)="onSubmit()" class="loginForm">
       <div class="row">
-        <div class="label">Username :</div>
-        <input type="text" name="name" [(ngModel)]="name" class="userInput"/>
+          <label for="name" class="label">Username:</label>
+          <input type="text" id="name" name="name" [(ngModel)]="name" class="userInput" />
       </div>
       <div class="row">
-        <div class="label">Password :</div>
-        <input type="text" name="password" [(ngModel)]="password"class="userInput"/>
+          <label for="password" class="label">Password:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" class="userInput" />
       </div>
       <div class="row">
-        <button type="submit">Submit</button>
+          <button type="submit" class="submitButton">Submit</button>
       </div>
-    </form>
+
+  <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+  <div class="note">Use admin username: 'admin' and password: 'admin' to log in as an admin.</div>
+  </form>
 </div>

@@ -5,7 +5,7 @@ import { LifeCycleHookLibRoutingModule } from './life-cycle-hook-lib-routing.mod
 import { LifeCycleHookLibComponent } from './life-cycle-hook-lib.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
-
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     LifeCycleHookLibComponent,
@@ -14,7 +14,8 @@ import { ChildComponent } from './child/child.component';
   ],
   imports: [
     CommonModule,
-    LifeCycleHookLibRoutingModule
+    LifeCycleHookLibRoutingModule,
+    MatCardModule
   ]
 })
 export class LifeCycleHookLibModule { }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MachineCodingLibComponent } from './machine-coding-lib.component';
 import { GoogleLikeSearchTypeAheadComponent } from './google-like-search-type-ahead/google-like-search-type-ahead.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
+import { TrendingProductComponent } from './trending-product/trending-product.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
     component: MachineCodingLibComponent,
     children: [
       { path: 'googleSearch', component: GoogleLikeSearchTypeAheadComponent },
-      { path: 'starRating', component: StarRatingComponent }
+      { path: 'starRating', component: StarRatingComponent },
+      { path: 'trendingProduct', component: TrendingProductComponent}
     ]
   },
 ];

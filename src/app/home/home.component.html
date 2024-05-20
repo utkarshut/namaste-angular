@@ -1,6 +1,13 @@
-<ul>
-    <a class="navLink" href="/">Home</a>
-    <a class="navLink" href="/toDoList">To Do List</a>
-    <a class="navLink" href="/lifeCycleHooks">LifeCycle Hooks</a>
-    <a class="navLink" href="/machineCodeLib">Machine Coding Practice</a>
-</ul>
+<div>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a class="nav-link" routerLink="/home">Home</a></li>
+            <li><a class="nav-link" routerLink="/toDoList">To Do List</a></li>
+            <li><a class="nav-link" routerLink="/lifeCycleHooks">LifeCycle Hooks</a></li>
+            <li><a class="nav-link" routerLink="/machineCodeLib">Machine Coding Practice</a></li>
+            <li><a class="nav-link" (click)="logout()">Logout</a></li>
+        </ul>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
+

@@ -9,15 +9,20 @@ import { loginReducer } from './store/reducer';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { HomeComponent } from './home/home.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponentComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponentComponent, HomeComponent, HomePageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     StoreModule.forRoot({ userState: loginReducer }),
+    NoopAnimationsModule,
+    MatCardModule
   ],
   providers: [
     {

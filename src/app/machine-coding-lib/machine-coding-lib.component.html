@@ -1,8 +1,10 @@
-<h1>Machine Coding</h1>
- <a  class="navLink" routerLink="/machineCodeLib/googleSearch"  routerLinkActive="active">
-        Google Search Keyword
-</a>
-<a class="navLink" routerLink="/machineCodeLib/starRating"  routerLinkActive="active">
-        Star Rating
-</a>
-<router-outlet></router-outlet>
+<div class="navbar">
+        <h1>Machine Coding</h1>
+        <div class="nav-links">
+          <a routerLink="/machineCodeLib/googleSearch" routerLinkActive="active">Google Search Keyword</a>
+          <a routerLink="/machineCodeLib/starRating" routerLinkActive="active">Star Rating</a>
+          <a routerLink="/machineCodeLib/trendingProduct" routerLinkActive="active">Trending Product</a>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+      

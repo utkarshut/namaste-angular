@@ -1,19 +1,36 @@
-.taskContainer{
+.taskContainer {
     border: 1px solid #ccc;
     padding: 1em;
     background-color: aqua;
     width: 20em;
-    display: flex;
     margin: 0.5em;
+    display: flex;
     align-items: center;
-}
-.title, .checkbox,.status{
-    width: 25%;
-    padding: 0 0.25em;
-}
-.deleteTask{
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .title {
+    flex: 1;
+    margin-right: 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .status {
+    flex: 1;
+    margin-right: 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  button {
     margin-left: auto;
-}
-.status{
-    width: 35%;
-}
+  }
+  

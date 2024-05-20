@@ -1,3 +1,35 @@
-.navLink{
-    display: block;
-}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #555; /* Add a border at the bottom */
+  }
+  
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px; /* Add space between nav links */
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px; /* Add rounded corners to the links */
+  }
+  
+  .nav-links a:hover {
+    background-color: #555; /* Change background color on hover */
+  }
+  
+  .nav-links a.active {
+    font-weight: bold;
+    background-color: #555; /* Change background color for active link */
+  }
+  

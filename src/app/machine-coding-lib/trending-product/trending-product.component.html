@@ -1,0 +1,12 @@
+<div class="bestsellers-container">
+    <mat-card *ngFor="let item of bestsellers" class="bestseller-card">
+      <img mat-card-image [src]="item.imageUrl" alt="{{ item.name }}">
+      <mat-card-content>
+        <h3>{{ item.name }}</h3>
+        <p><strong>Rating:</strong> {{ item.rating }}</p>
+        <p><strong>Reviews:</strong> {{ item.reviews }}</p>
+        <p><strong>Price:</strong> {{ item.price }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

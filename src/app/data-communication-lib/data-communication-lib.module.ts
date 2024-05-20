@@ -9,7 +9,9 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskFilterPipe } from './task-filter.pipe';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { HighLightElementDirective } from './high-light-element.directive';
-
+import { MatCheckboxModule} from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule }  from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { HighLightElementDirective } from './high-light-element.directive';
     FormsModule,
     CommonModule,
     DataCommunicationLibRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule
   ]
 })
-export class FormsLibModule { }
+export class DataCommunicationLibModule { }
